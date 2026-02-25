@@ -5,40 +5,47 @@ int main()
 {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
+
     int n;
     cin >> n;
-    for (int i = 0; i < n + 1; i++)
+
+    // Upper part
+    for (int i = 0; i <= n; i++)
     {
         for (int j = i; j < n; j++)
-        {
             cout << "  ";
-        }
-        for (int j = 0; j < i + 1; j++)
+
+        for (int j = 0; j <= i; j++)
         {
-            cout << j << " ";
+            cout << j;
+            if (j != i)
+                cout << " ";
         }
+
         for (int j = i - 1; j >= 0; j--)
-        {
-            cout << j << " ";
-        }
-        cout << endl;
+            cout << " " << j;
+
+        cout << "\n";
     }
 
+    // Lower part
     for (int i = n - 1; i >= 0; i--)
     {
         for (int j = i; j < n; j++)
-        {
             cout << "  ";
-        }
-        for (int j = 0; j < i + 1; j++)
+
+        for (int j = 0; j <= i; j++)
         {
-            cout << j << " ";
+            cout << j;
+            if (j != i)
+                cout << " ";
         }
+
         for (int j = i - 1; j >= 0; j--)
-        {
-            cout << j << " ";
-        }
-        cout << endl;
+            cout << " " << j;
+
+        cout << "\n";
     }
+
     return 0;
 }

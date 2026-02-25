@@ -6,7 +6,7 @@ void solve(int n, int m, vector<vector<char>>& grid) {
         for(int j = 0; j < m; j++) {
             grid[i][j] = '#';
         }
-    }
+    }   
 
     for(int i = 1; i < n; i+=2) {
         if((i-1) % 4 == 0) {
